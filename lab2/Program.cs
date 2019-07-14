@@ -25,7 +25,7 @@ namespace lab2
 
                 double area = userLength * userWidth;
                 double perimeter = 2 * userLength + 2 * userWidth;
-                double volume = userLength * userWidth * 12; // assuming height of GC rooms are 12 feet
+                double volume = userLength * userWidth * 12; // assuming height of GC rooms are 12 feet high
 
                 Console.WriteLine($"The Area of the room is {area} square feet");
                 Console.WriteLine($"The perimeter of the room is {perimeter} feet");

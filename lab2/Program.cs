@@ -9,19 +9,57 @@ namespace lab2
         static void Main(string[] args)
         {
 
-
-
-
             string inputYN = ("y");
-
+            double userLength = 0;
+            double userWidth = 0;
+            bool isInvalidInput = true;
 
             while (inputYN == "y")
             {
                 Console.WriteLine("Welcome to the Grand Circus' Room Detail Generator!");
-                Console.WriteLine("Enter Length");
-                double.TryParse((Console.ReadLine()),out double userLength);
-                Console.WriteLine("Enter Width");
-                double.TryParse((Console.ReadLine()), out double userWidth);
+
+
+                while (isInvalidInput)
+                {
+                    Console.WriteLine("Enter Length of the room");
+
+                    string userInput = Console.ReadLine();
+                    //double.TryParse((Console.ReadLine()), out userLength);
+
+
+                    if (double.TryParse(userInput, out userLength))
+                    {
+                        isInvalidInput = false;
+                    }
+                    else
+
+                    {
+                        Console.WriteLine("Please enter a valid number");
+                    }
+                }
+
+                isInvalidInput = true;
+
+                while (isInvalidInput)
+                {
+                    Console.WriteLine("Enter the Width of the room");
+                    string userInput = Console.ReadLine();
+
+
+                    if (double.TryParse(userInput, out userWidth))
+                    {
+                        isInvalidInput = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Please enter a valid number");
+                    }
+
+
+                }
+
+                isInvalidInput = true;
+
 
                 double area = userLength * userWidth;
                 double perimeter = 2 * userLength + 2 * userWidth;
@@ -31,8 +69,10 @@ namespace lab2
                 Console.WriteLine($"The perimeter of the room is {perimeter} feet");
                 Console.WriteLine($"The volume of the room is {volume} cubic feet");
 
-                Console.WriteLine("Continue? (y/n)");
+                Console.WriteLine("Continue? ([y]/[n])");
                 inputYN = Console.ReadLine();
+
+
 
                 //if (inputYN != "yes" or inputYN !="no")
                 //{

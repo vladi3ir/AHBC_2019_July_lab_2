@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GC\\AHBC_2019_July_lab_2\\lab2\\lab2.csproj": {}
+    "C:\\GC\\Labs\\AHBC_2019_July_lab_2\\lab2\\lab2.csproj": {}
   },
   "projects": {
-    "C:\\GC\\AHBC_2019_July_lab_2\\lab2\\lab2.csproj": {
+    "C:\\GC\\Labs\\AHBC_2019_July_lab_2\\lab2\\lab2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GC\\AHBC_2019_July_lab_2\\lab2\\lab2.csproj",
+        "projectUniqueName": "C:\\GC\\Labs\\AHBC_2019_July_lab_2\\lab2\\lab2.csproj",
         "projectName": "lab2",
-        "projectPath": "C:\\GC\\AHBC_2019_July_lab_2\\lab2\\lab2.csproj",
+        "projectPath": "C:\\GC\\Labs\\AHBC_2019_July_lab_2\\lab2\\lab2.csproj",
         "packagesPath": "C:\\Users\\vladi3ir\\.nuget\\packages\\",
-        "outputPath": "C:\\GC\\AHBC_2019_July_lab_2\\lab2\\obj\\",
+        "outputPath": "C:\\GC\\Labs\\AHBC_2019_July_lab_2\\lab2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

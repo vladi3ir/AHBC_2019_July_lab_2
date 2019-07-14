@@ -19,9 +19,9 @@ namespace lab2
             {
                 Console.WriteLine("Welcome to the Grand Circus' Room Detail Generator!");
                 Console.WriteLine("Enter Length");
-                double userLength = Double.Parse(Console.ReadLine());
+                double.TryParse((Console.ReadLine()),out double userLength);
                 Console.WriteLine("Enter Width");
-                double userWidth = double.Parse(Console.ReadLine());
+                double.TryParse((Console.ReadLine()), out double userWidth);
 
                 double area = userLength * userWidth;
                 double perimeter = 2 * userLength + 2 * userWidth;

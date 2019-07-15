@@ -17,42 +17,69 @@ namespace lab2
             while (inputYN == "y")
             {
                 Console.WriteLine("Welcome to the Grand Circus' Room Detail Generator!");
+                Console.WriteLine("Enter Length of the room ");
 
 
                 while (isInvalidInput)
                 {
-                    Console.WriteLine("Enter Length of the room");
 
                     string userInput = Console.ReadLine();
                     //double.TryParse((Console.ReadLine()), out userLength);
-
+                    //foreach (var item in userInput)
+                    //{
+                    //    if (item == '\'')
+                    //    {
+                    //        Console.WriteLine("foot");
+                    //    }
+                    //    else if (item =='\"' )
+                    //        { Console.WriteLine("inch");
+                    //    }
+                    //}
 
                     if (double.TryParse(userInput, out userLength))
                     {
-                        isInvalidInput = false;
+                        {
+                            if (userInput == "0")
+                            {
+                                Console.WriteLine("Humm, not sure if 0ft will work, try again");
+                            }
+                            else
+                            {
+                                isInvalidInput = false;
+                            }
+                        }
                     }
                     else
 
                     {
-                        Console.WriteLine("Please enter a valid number");
+                        Console.WriteLine("Please enter a valid number for Length of the room. For example 24'6\" as 24.5");
                     }
                 }
 
                 isInvalidInput = true;
 
+                Console.WriteLine("Enter the Width of the room");
+
                 while (isInvalidInput)
                 {
-                    Console.WriteLine("Enter the Width of the room");
                     string userInput = Console.ReadLine();
 
 
                     if (double.TryParse(userInput, out userWidth))
                     {
-                        isInvalidInput = false;
+                        if (userInput == "0")
+                        {
+                            Console.WriteLine("Humm, not sure if 0ft will work, try again");
+                        }
+                        else
+                        {
+                            isInvalidInput = false;
+                        }
                     }
+
                     else
                     {
-                        Console.WriteLine("Please enter a valid number");
+                        Console.WriteLine("Please enter a valid number for Width of the room. For example 24'6\" as 24.5");
                     }
 
 
@@ -70,75 +97,32 @@ namespace lab2
                 Console.WriteLine($"The volume of the room is {volume} cubic feet");
 
                 Console.WriteLine("Continue? ([y]/[n])");
-                inputYN = Console.ReadLine();
+                while (isInvalidInput)
+                {
 
 
+                    inputYN = Console.ReadLine();
 
-                //if (inputYN != "yes" or inputYN !="no")
-                //{
+                    if (inputYN == ("y") || inputYN == ("n"))
+                    {
+                        isInvalidInput = false;
 
-                //}
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("please enter ([y]/[n]) format to continue or exit");
+
+                    }
+                }
+                isInvalidInput = true;
+
+
 
             }
 
 
-            //bool isInvalidLengthInput = true;
-            //bool isInvalidWidthInput = true;
 
-            //double userLength = 0;
-            //double userWidth = 0;
-
-
-            //string input = Console.ReadLine();
-
-            //for (int i = 0; i < input.Length; i++)
-            //{
-            //    if (input[i] == 'h' || input[i] == 'u')
-            //    {
-            //        Console.WriteLine($"you're input is {input[i]}, at index: {i}");
-            //    }
-            //}
-
-            //while (isInvalidLengthInput)
-            //{
-
-
-            //    Console.WriteLine("Enter the length!");
-            //    string userInputLength = Console.ReadLine();
-
-            //    if (double.TryParse(userInputLength, out userLength))
-            //    {
-            //        isInvalidLengthInput = false;
-            //    }
-            //    else
-
-            //    {
-            //        Console.WriteLine("Please enter a number");
-            //    }
-
-            //}
-
-
-            //while (isInvalidWidthInput)
-            //{
-            //    Console.WriteLine("Enter the Width!");
-            //    string userInputWidth = Console.ReadLine();
-
-            //    if (double.TryParse(userInputWidth, out userWidth))
-            //    {
-            //        isInvalidWidthInput = false;
-            //    }
-            //    else
-
-            //    {
-            //        Console.WriteLine("Please enter a number");
-            //    }
-
-
-            //}
-
-            //Console.WriteLine($"The area of the room is {userLength*userWidth} square feet");
-            //Console.WriteLine($"The perimeter of the room is {2*userLength+2*userWidth} feet");
         }
 
     }
